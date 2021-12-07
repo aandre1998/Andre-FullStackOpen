@@ -1,0 +1,11 @@
+Client -> Server: HTTP GET /spa
+Server -> Client: (200) HTML
+
+Client -> Server: HTTP GET /main.css
+Server -> Client (200) main.css
+
+Client -> Server: HTTP GET /main.js
+Server -> Client (200) main.js
+
+Client -> Server: HTTP GET /data.json
+Server -> Client (200) data.json

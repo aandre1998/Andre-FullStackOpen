@@ -1,0 +1,2 @@
+Client -> Server: HTTP POST
+Server -> Client: (201) Created

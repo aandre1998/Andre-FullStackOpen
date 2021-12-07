@@ -1,0 +1,14 @@
+Client -> Server: HTTP POST /new_note
+Server -> Client: (302) Redirect to /notes
+
+Client -> Server: HTTP GET /notes
+Server -> Client: (200) HTML
+
+Client -> Server: HTTP GET /main.css
+Server -> Client (200) main.css
+
+Client -> Server: HTTP GET /main.js
+Server -> Client (200) main.js
+
+Client -> Server: HTTP GET /data.json
+Server -> Client (200) data.json
