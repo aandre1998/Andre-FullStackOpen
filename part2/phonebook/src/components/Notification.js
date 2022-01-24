@@ -1,6 +1,8 @@
 import React from 'react';
 
 const Notification = ({notificationMessage}) => {
+    
+    //Styles for Notification component
     const successStyle = {
         color: 'green',
         background: 'lightgrey',
@@ -20,11 +22,8 @@ const Notification = ({notificationMessage}) => {
         padding: '10px',
         marginBottom: '10px'
     }
-    
-    if (notificationMessage['message'] === '') {
-        return null;
-    }
 
+    //Adjust styles based on success/error (type of message passed in props)
     if (notificationMessage['type'] === 'success') {
         return (
             <div className='success' style={successStyle}>
@@ -39,6 +38,7 @@ const Notification = ({notificationMessage}) => {
             </div>
         )
     }
+    //If type is not success or error (e.g. blank message), return null
     else {
         return null;
     }
