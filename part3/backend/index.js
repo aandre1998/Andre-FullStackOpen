@@ -59,11 +59,16 @@ app.put('/api/notes/:id', (request, response) => {
 
     var index = notes.findIndex(n => n.id === id);
 
-    notes[index].content = note.content;
-    notes[index].date = note.date;
-    notes[index].important = note.important;
+    if (index > -1) {
+        notes[index].content = note.content;
+        notes[index].date = note.date;
+        notes[index].important = note.important;
 
-    response.status(200).end();
+        response.status(200).end();
+    }
+    else {
+        response.status(404).end();
+    }
 })
 
 const generateId = () => {
